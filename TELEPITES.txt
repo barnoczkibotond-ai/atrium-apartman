@@ -1,0 +1,15 @@
+ÁTRIUM APARTMAN – TELEGRAM ÉRTESÍTÉS
+
+FONTOS: a Netlify Drop (mappa behúzása) nem telepíti a Netlify Functions kódját.
+A teljes projektet Netlify CLI-vel vagy GitHub builddel kell telepíteni.
+
+1. A Netlify projektben legyen TELEGRAM_BOT_TOKEN környezeti változó, Functions hatókörrel. A tokent ne írd a HTML-be.
+2. A Telegram-botnak küldj /start üzenetet.
+3. Számítógépen Node.js telepítése után a kicsomagolt mappában: npx netlify-cli login
+4. npx netlify-cli link (válaszd ki a meglévő Átrium Apartman projektet)
+5. npx netlify-cli deploy --prod
+6. Próbafoglalással ellenőrizd, hogy valóban megjön-e az üzenet Telegramon.
+
+A sikeres űrlapbeküldés csak akkor jelenít meg köszönőoldalt, ha a Telegram API elfogadta az üzenetet. A foglalás továbbra is csak kérelem, nem automatikus visszaigazolás.
+
+FIGYELEM: Ez a változat nem ment külön Netlify Forms rekordot, ezért a Telegram-üzenet megőrzése fontos. Éles üzemhez célszerű további tartós tárolást és spamvédelmet is beállítani.
